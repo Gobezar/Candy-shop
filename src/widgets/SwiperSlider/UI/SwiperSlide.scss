@@ -1,0 +1,15 @@
+$orange-color: #f9a505;
+$gray-color: #383735;
+$light_gray-color: #b6ad9c;
+
+.swiper-slide {
+  margin-right: 0 !important;
+}
+
+.slider {
+  width: 70%;
+}
+
+.swiper-slide-cards.last-slide {
+  border-right: 1px solid $gray-color;
+}

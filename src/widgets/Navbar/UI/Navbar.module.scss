@@ -1,0 +1,37 @@
+$orange-color: #f9a505;
+$gray-color: #383735;
+$light_gray-color: #b6ad9c;
+
+.navbar_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 6%;
+}
+.navbar_logo {
+  width: 70%;
+  height: auto;
+}
+
+.navbar_items {
+  display: flex;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+
+  li {
+    margin: 30px;
+    list-style-type: none;
+    font-size: 16px;
+    font-weight: bolder;
+    cursor: pointer;
+    a {
+      color: $gray-color;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+    }
+    :hover {
+      border-bottom: 1px solid $orange-color;
+      color: $orange-color;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+.aboutSection_wrapper {
+  display: flex;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+
+  & .left {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  & .left img {
+    width: 100%;
+    height: 80vh;
+    object-fit: cover;
+  }
+
+  & .right {
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: left;
+    flex-direction: column;
+    padding-left: 5%;
+
+    & h2 {
+      text-align: left;
+      font-size: 48px;
+    }
+
+    & p {
+      text-align: left;
+      max-width: 80%;
+    }
+  }
+}

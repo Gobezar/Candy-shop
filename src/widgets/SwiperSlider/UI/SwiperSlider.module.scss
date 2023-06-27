@@ -1,0 +1,23 @@
+$orange-color: #f9a505;
+$gray-color: #383735;
+$light_gray-color: #b6ad9c;
+
+.swiperSlider_wrapper {
+  display: flex;
+  border-bottom: 1px solid $gray-color;
+  border-top: 1px solid $gray-color;
+}
+
+.sliderTitleBlock {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  & h2 {
+    font-size: 60px;
+    font-family: "Cuprum", sans-serif;
+  }
+}
+.slider {
+  width: 70%;
+}

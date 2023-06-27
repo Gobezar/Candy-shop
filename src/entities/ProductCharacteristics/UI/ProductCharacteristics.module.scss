@@ -1,0 +1,72 @@
+$orange-color: #f9a505;
+$gray-color: #383735;
+$light_gray-color: #b6ad9c;
+
+.ProductCharacteristics_wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  .left {
+    width: 50%;
+
+    .image {
+      width: 100%;
+      border: 1px solid $gray-color;
+    }
+  }
+  .right {
+    width: 50%;
+
+    h2 {
+      border: 1px solid $gray-color;
+      padding: 30px 40px;
+      font-size: 48px;
+      text-align: center;
+    }
+    .mainInfo {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 20px;
+      overflow: hidden;
+
+      div {
+        text-align: center;
+        border: 1px solid $gray-color;
+        padding: 30px 10px;
+        white-space: nowrap;
+        flex-grow: 1;
+        flex-basis: 25%;
+        overflow: hidden;
+      }
+    }
+    .secondaryInfo {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      overflow: hidden;
+    }
+    .property {
+      font-size: 20px;
+      text-align: center;
+      border: 1px solid $gray-color;
+      padding: 30px 10px;
+      white-space: nowrap;
+      flex-grow: 1;
+      flex-basis: 25%;
+      overflow: hidden;
+    }
+    .description,
+    .composition {
+      text-align: left;
+      border: 1px solid $gray-color;
+      padding: 30px 30px;
+      h3 {
+        font-size: 30px;
+      }
+      p {
+        font-size: 20px;
+      }
+    }
+  }
+}

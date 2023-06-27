@@ -1,0 +1,32 @@
+.cartItem_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 5%;
+
+  .deleteBlock {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+  }
+  .titleBlock {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+  }
+  .imgBlock {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    img {
+      width: 50%;
+    }
+  }
+  .priceBlock {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+  }
+}
