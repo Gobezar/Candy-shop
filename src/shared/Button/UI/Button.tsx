@@ -6,7 +6,7 @@ import css from "./Button.module.scss";
 type ButtonTheme = "primary" | "secondary";
 
 type Props = {
-  link: string;
+  link?: string;
   onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
   children: React.ReactNode;
   theme?: ButtonTheme;
