@@ -1,12 +1,17 @@
-import React from "react";
+import React, { memo } from "react";
 import cl from "./AboutSection.module.scss";
-import { aboutSectionImage } from "../consts/aboutSectionImage";
+import Image from "next/image";
+import aboutSectionImage from "../../../../public/images/AboutSectionImage.jpg";
 
 const AboutSection = () => {
   return (
-    <div id="aboutSection" className={cl.aboutSection_wrapper}>
+    <section id="aboutSection" className={cl.aboutSection_wrapper}>
       <div className={cl.left}>
-        <img src={aboutSectionImage} alt="about section image" />
+        <Image
+          src={aboutSectionImage}
+          className={cl.image}
+          alt="about section image"
+        />
       </div>
       <div className={cl.right}>
         <h2>О нас</h2>
@@ -18,7 +23,7 @@ const AboutSection = () => {
           Вашего стола.
         </p>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -3,7 +3,7 @@ import Link from "next/link";
 import cn from "classnames";
 import css from "./Button.module.scss";
 
-type ButtonTheme = "primary" | "secondary";
+type ButtonTheme = "primary" | "secondary" | "categories";
 
 type Props = {
   link?: string;

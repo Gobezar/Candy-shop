@@ -1,10 +1,11 @@
 import React from "react";
 import cl from "./ContactsSection.module.scss";
-import { contactsSectionImage } from "../consts/contactsSectionImage";
+import Image from "next/image";
+import contactsSectionImage from "../../../../public/images/ContactsSectionImage.jpg";
 
 const ContactsSection = () => {
   return (
-    <div id="contactsSection" className={cl.contactsSection_wrapper}>
+    <section id="contactsSection" className={cl.contactsSection_wrapper}>
       <div className={cl.left}>
         <h2>Контакты</h2>
         <p>
@@ -13,15 +14,18 @@ const ContactsSection = () => {
           e-mail: candyshop@gmail.com <br />
           instagram: candyshop64
           <br />
-          Юридический адрес: Россия, Саратовская обл., г. Саратов, ул. Емлютина
-          Д.В., д. 64
+          Юридический адрес: Россия, Саратовская обл.,
+          <br /> г. Саратов, ул. Сладкая Д.В., д. 64
         </p>
       </div>
       <div className={cl.right}>
-        <img src={contactsSectionImage} alt="contacts section image" />
+        <Image
+          src={contactsSectionImage}
+          alt="contacts section image"
+          className={cl.image}
+        />
       </div>
-    </div>
+    </section>
   );
 };
-
 export default ContactsSection;

@@ -1,4 +1,10 @@
+@import "../../../app//styles/globals.scss";
+
 .search_input {
   width: 500px;
   padding: 10px 20px;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  border: none;
+  border-bottom: 1px solid $gray-color;
 }

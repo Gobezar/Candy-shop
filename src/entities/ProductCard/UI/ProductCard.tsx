@@ -2,7 +2,11 @@
 import React from "react";
 import Link from "next/link";
 import useProductsStore from "@/app/store/useProductsStore";
+import useHistoryViewStore from "@/features/HistoryViewList/model/useHistoryViewList";
 import SkeletonProductCard from "@/shared/SkeletonProductCard/UI/SkeletonProductCard";
+import Error from "@/shared/Error/UI/error";
+import cn from "classnames";
+import Image from "next/image";
 import { useQuery } from "@tanstack/react-query";
 
 import cl from "./ProductCard.module.scss";
@@ -15,6 +19,7 @@ interface IproductCard {
   weight: number;
   image: string;
   categoryName: string;
+  source?: string;
 }
 
 const ProductCard: React.FC<IproductCard> = ({
@@ -25,8 +30,10 @@ const ProductCard: React.FC<IproductCard> = ({
   weight,
   image,
   categoryName,
+  source,
 }) => {
-  const { products, addToHistoryViewList } = useProductsStore((state) => state);
+  const { products } = useProductsStore((state) => state);
+  const { addToHistoryViewList } = useHistoryViewStore((state) => state);
   const selectedProduct = products.filter((prod) => prod.id === id);
   const { isLoading, isError } = useQuery(["products"]);
 
@@ -42,9 +49,18 @@ const ProductCard: React.FC<IproductCard> = ({
     <Link href={`/product/${id}`}>
       <div
         onClick={() => addToHistoryViewList(selectedProduct[0])}
-        className={cl.productCard_wrapper}
+        className={cn(
+          cl.productCard_wrapper,
+          source === "productListPage" ? cl.productListPage : ""
+        )}
       >
-        <img src={image} alt="изображение продукта" />
+        <Image
+          src={image}
+          className={cl.image}
+          alt="изображение продукта"
+          width={100}
+          height={100}
+        />
         <div className={cl.naming}>
           <p>{categoryName}</p>
           <p>

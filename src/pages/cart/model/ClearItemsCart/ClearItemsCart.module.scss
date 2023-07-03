@@ -1,0 +1,26 @@
+$orange-color: #f9a505;
+$gray-color: #383735;
+$light_gray-color: #b6ad9c;
+
+.clearItemsCart_wrapper {
+  display: flex;
+  justify-content: center;
+  width: 30%;
+}
+
+.clearCartButton {
+  cursor: pointer;
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  padding: 15px 60px;
+  background-color: $gray-color;
+  border: none;
+  &:hover {
+    background-color: $orange-color;
+    color: #fff;
+    font-weight: 600;
+  }
+}

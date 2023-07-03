@@ -1,26 +1,35 @@
-$orange-color: #f9a505;
-$gray-color: #383735;
-$light_gray-color: #b6ad9c;
+@import "../../../app/styles/globals.scss";
 
 .footer_wrapper {
   display: flex;
   justify-content: center;
   text-align: center;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+
+  :last-child {
+    border-right: none;
+  }
 
   > div {
     flex: 1; /* Равномерное распределение доступного пространства между элементами */
-    border: 1px solid $gray-color;
+    border-top: 1px solid $gray-color;
     padding: 70px 0;
+    border-right: 1px solid $gray-color;
   }
 
   h3 {
     text-transform: uppercase;
     margin: 0;
+    color: $gray-color;
+    font-size: 25px;
   }
 
-  p {
+  p,
+  a {
     line-height: 40px;
     margin: 0;
+    color: $gray-color;
   }
 
   ul {
@@ -31,5 +40,6 @@ $light_gray-color: #b6ad9c;
   ul li {
     line-height: 40px;
     margin: 0;
+    cursor: pointer;
   }
 }

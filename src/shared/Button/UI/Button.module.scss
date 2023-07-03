@@ -1,6 +1,4 @@
-$orange-color: #f9a505;
-$gray-color: #383735;
-$light_gray-color: #b6ad9c;
+@import "../../../app//styles//globals.scss";
 
 .root {
   cursor: pointer;
@@ -22,4 +20,27 @@ $light_gray-color: #b6ad9c;
 .root.disabled {
   opacity: 0.5;
   cursor: not-allowed;
+}
+
+.root_theme_secondary {
+  font-weight: 600;
+  font-size: 25px;
+  color: $gray-color;
+  padding: 15px 80px;
+  background-color: #fff;
+  border: 1px solid $gray-color;
+}
+
+.root_theme_categories {
+  background-color: transparent;
+  border: none;
+  color: $gray-color;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  font-weight: bolder;
+  cursor: pointer;
+  &:hover {
+    color: $orange-color;
+    background-color: transparent;
+  }
 }

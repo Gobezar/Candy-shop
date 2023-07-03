@@ -1,0 +1,19 @@
+@import "../../../app/styles/globals.scss";
+
+.QuantityCartItems_wrapper {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+}
+
+.QuantityCartItems_wrapper button {
+  margin: 30px;
+  background-color: transparent;
+  font-size: 20px;
+  border: none;
+  color: $gray-color;
+  font-size: 23px;
+  cursor: pointer;
+  &:hover {
+    color: $orange-color;
+  }
+}

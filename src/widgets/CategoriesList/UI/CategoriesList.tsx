@@ -1,9 +1,9 @@
 "use client";
-import React from "react";
+import React, { memo } from "react";
 import useCategoriesStore from "../model/useCategoriesStore";
 import cn from "classnames";
-import Link from "next/link";
 import { categories } from "../consts/categories";
+import Button from "@/shared/Button/UI/Button";
 import cl from "./CategoriesList.module.scss";
 
 type Props = {
@@ -25,14 +25,13 @@ const CategoriesList: React.FC<Props> = () => {
               categoryId === i ? cl.active : ""
             )}
           >
-            <Link href="/catalog">
-              <button
-                className={cl.categories_button}
-                onClick={() => setCategoryId(i)}
-              >
-                {categoryName}
-              </button>
-            </Link>
+            <Button
+              theme="categories"
+              onClick={() => setCategoryId(i)}
+              link={"/catalog"}
+            >
+              {categoryName}
+            </Button>
           </li>
         ))}
       </ul>
@@ -40,4 +39,4 @@ const CategoriesList: React.FC<Props> = () => {
   );
 };
 
-export default CategoriesList;
+export default React.memo(CategoriesList);

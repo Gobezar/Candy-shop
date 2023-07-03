@@ -3,19 +3,20 @@ import React, { ReactNode } from "react";
 import Link from "next/link";
 import { Link as ScrollLink } from "react-scroll";
 import { navbarItems } from "../consts/navbarItems";
+import Image from "next/image";
+import logo from "../../../../public/images/logo.png";
 import cl from "./Navbar.module.scss";
 
 interface NavbarProps {
   children?: ReactNode;
 }
-const logo = "https://i.ibb.co/kDF8Zcf/image-4.png";
 
 const Navbar: React.FC<NavbarProps> = ({ children }) => {
   return (
     <nav>
       <div className={cl.navbar_wrapper}>
         <Link href={"/"}>
-          <img className={cl.navbar_logo} src={logo} alt="logo" />
+          <Image className={cl.navbar_logo} src={logo} alt="logo" />
         </Link>
         {children}
         <ul className={cl.navbar_items}>
@@ -40,4 +41,4 @@ const Navbar: React.FC<NavbarProps> = ({ children }) => {
   );
 };
 
-export default Navbar;
+export default React.memo(Navbar);

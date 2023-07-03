@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import {
   cakes,
   bigCakes,
@@ -11,26 +11,26 @@ import cl from "./CategoriesSection.module.scss";
 
 const CategoriesSection = () => {
   return (
-    <div className={cl.CategoriesSection}>
+    <section className={cl.CategoriesSection}>
       <div className={cl.Container1}>
-        <CategoryCard image={cakes} text={"Пирожные"} />
+        <CategoryCard id={"1"} image={cakes} text={"Пирожные"} />
       </div>
       <div className={cl.Container2}>
         <h2>Меню</h2>
       </div>
       <div className={cl.Container3}>
-        <CategoryCard image={bigCakes} text={"Торты"} />
+        <CategoryCard id={"2"} image={bigCakes} text={"Торты"} />
       </div>
       <div className={cl.Container4}>
-        <CategoryCard image={pancakes} text={"Панкейки"} />
+        <CategoryCard id={"3"} image={pancakes} text={"Панкейки"} />
       </div>
       <div className={cl.Container5}>
-        <CategoryCard image={pies} text={"Пироги"} />
+        <CategoryCard id={"4"} image={pies} text={"Пироги"} />
       </div>
       <div className={cl.Container6}>
-        <CategoryCard image={sandwiches} text={"Сэндвичи"} />
+        <CategoryCard id={"5"} image={sandwiches} text={"Сэндвичи"} />
       </div>
-    </div>
+    </section>
   );
 };
 

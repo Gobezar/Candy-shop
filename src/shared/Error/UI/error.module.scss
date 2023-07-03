@@ -1,0 +1,9 @@
+@import "../../../app//styles/globals.scss";
+
+.error_wrapper {
+  text-align: center;
+  font-size: 50px;
+  font-family: "Cuprum", sans-serif;
+  margin: 15%;
+  color: $gray-color;
+}

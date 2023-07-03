@@ -2,9 +2,11 @@
 import React from "react";
 import useProductsStore from "@/app/store/useProductsStore";
 import useCartStore from "@/features/Cart/model/useCartStore";
-
+import Image from "next/image";
 import cl from "./ProductCharacteristics.module.scss";
-import Button from "@/shared/Button/UI/Button";
+import { StarFilled } from "@ant-design/icons";
+import useFavoritesListStore from "@/features/FavoritesList/model/useFavoritesList";
+import ProductLoader from "../model/ProductLoader";
 
 interface ProductCharacteristics {
   id: string;
@@ -14,36 +16,62 @@ const ProductCharacteristics: React.FC<ProductCharacteristics> = ({ id }) => {
   const products = useProductsStore((state) => state.products);
   const selectedProduct = products.filter((product) => product.id == +id);
 
-  const { addToFavoriteList } = useProductsStore((state) => state);
+  const { addToFavoritesList } = useFavoritesListStore((state) => state);
   const { addItem } = useCartStore((state) => state);
+
+  if (selectedProduct.length < 1) {
+    return <ProductLoader />;
+  }
 
   return (
     <>
       {selectedProduct.map((prod) => (
         <div key={prod.id} className={cl.ProductCharacteristics_wrapper}>
           <div className={cl.left}>
-            <img className={cl.image} src={prod.image} alt="product image" />
+            <Image
+              className={cl.image}
+              src={prod.image}
+              alt="product image"
+              width={100}
+              height={100}
+            />
           </div>
           <div className={cl.right}>
             <h2>{prod.title}</h2>
             <div className={cl.mainInfo}>
-              <div>{prod.weight} гр.</div>
-              <div>{prod.price_second} ₽</div>
-              <div>
-                <p>- 1 +</p>
+              <div className={cl.mainInfoBlock}>{prod.weight} гр.</div>
+              <div className={cl.mainInfoBlock}>{prod.price_second} ₽</div>
+              <div className={cl.mainInfoBlock}>
+                <button
+                  className={cl.addToFavoriteListButton}
+                  onClick={() => addToFavoritesList(selectedProduct[0])}
+                >
+                  <StarFilled />
+                </button>
               </div>
-              <div>
-                <Button>В корзину</Button>
+              <div className={cl.mainInfoBlock}>
+                <button
+                  className={cl.addToCartButton}
+                  onClick={() => addItem(selectedProduct[0])}
+                >
+                  Купить
+                </button>
               </div>
             </div>
-            <div className={cl.property}>
+            <div className={cl.secondaryInfoBlockTop}>
               <p>На 100 гр. продукта: </p>
             </div>
             <div className={cl.secondaryInfo}>
-              <div className={cl.property}>kkal: {prod.kilocalories}</div>
-              <div className={cl.property}>Жиры: {prod.fat}</div>
-              <div className={cl.property}>Белки: {prod.proteins}</div>
-              <div className={cl.property}>Углеводы: {prod.carbohydrates}</div>
+              <div className={cl.secondaryInfoBlock}>
+                kkal: {prod.kilocalories}
+              </div>
+              <div className={cl.secondaryInfoBlock}>Жиры: {prod.fat}</div>
+              <div className={cl.secondaryInfoBlock}>
+                Белки: {prod.proteins}
+              </div>
+              <div className={cl.secondaryInfoBlock}>
+                Углеводы: {prod.carbohydrates}
+              </div>
             </div>
             <div className={cl.description}>
               <h3>Описание</h3>
@@ -56,12 +84,6 @@ const ProductCharacteristics: React.FC<ProductCharacteristics> = ({ id }) => {
           </div>
         </div>
       ))}
-      <button onClick={() => addToFavoriteList(selectedProduct[0])}>
-        Добавить в избранное
-      </button>
-      <button onClick={() => addItem(selectedProduct[0])}>
-        Добавить в корзину
-      </button>
     </>
   );
 };

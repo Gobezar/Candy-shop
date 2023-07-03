@@ -10,10 +10,10 @@ import useProductsStore from "@/app/store/useProductsStore";
 
 import ProductCard from "@/entities/ProductCard/UI/ProductCard";
 import Error from "@/shared/Error/UI/error";
-import Loading from "@/shared/Loading/UI/loading";
 import SkeletonProductCard from "@/shared/SkeletonProductCard/UI/SkeletonProductCard";
 import { Iproduct } from "@/types";
 import cl from "./ProductList.module.scss";
+import Loading from "@/shared/Loading/UI/loading";
 
 const ProductsList = () => {
   const { categoryId } = useCategoriesStore((state) => state);
@@ -30,12 +30,12 @@ const ProductsList = () => {
       })
   );
   const searchedElements = useSearchedElements(data, searchText);
-  const skeleton = [...new Array(31)].map((_, index) => (
-    <SkeletonProductCard key={index} />
-  ));
+  const skeleton =
+    data && data.map((obj: Iproduct) => <SkeletonProductCard key={obj.id} />);
 
-  // console.log(categoryId);
-  //  Есть ошибка , нужно исправить
+  if (isLoading) {
+    return <Loading />;
+  }
 
   if (isError) {
     return <Error />;
@@ -43,10 +43,7 @@ const ProductsList = () => {
 
   return (
     <div className={cl.productList_wrapper}>
-      <div className={cl.productList_filtersBlock}>
-        <p>Фильтры</p>
-      </div>
-      <div>
+      <div className={cl.productsBlock}>
         <ul>
           {isLoading
             ? skeleton
@@ -61,6 +58,7 @@ const ProductsList = () => {
                     weight={obj.weight}
                     image={obj.image}
                     categoryName={obj.categoryName}
+                    source={"productListPage"}
                   />
                 </li>
               ))}

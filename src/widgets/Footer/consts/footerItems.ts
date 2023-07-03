@@ -7,17 +7,17 @@ export const footerItems: IfooterItems[] = [
   },
   {
     id: 1,
-    name: "Корзина",
-    address: "/cart",
+    name: "Контакты",
+    address: "#contactsSection",
   },
   {
     id: 2,
     name: "О нас",
-    address: "/about",
+    address: "#aboutSection",
   },
   {
     id: 3,
-    name: "Контакты",
-    address: "/contacts",
+    name: `Корзина `,
+    address: "/cart",
   },
 ];

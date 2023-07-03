@@ -1,10 +1,10 @@
-import React from "react";
-import cl from "./Header.module.scss";
+import React, { memo } from "react";
 import Button from "@/shared/Button/UI/Button";
-import Link from "next/link";
+import Image from "next/image";
+import cl from "./Header.module.scss";
+import HeaderImage from "../../../../public/images/HeaderImage.jpg";
 
 const Header = () => {
-  const img = "https://i.ibb.co/jJ7NvK7/59265795853723-5ea0f7725cbe21.jpg";
   return (
     <div className={cl.header_wrapper}>
       <div className={cl.left}>
@@ -18,9 +18,10 @@ const Header = () => {
         </div>
       </div>
       <div className={cl.right}>
-        <img className={cl.image} src={img} alt="header image" />
+        <Image className={cl.image} src={HeaderImage} alt="header image" />
       </div>
     </div>
   );
 };
+
 export default Header;

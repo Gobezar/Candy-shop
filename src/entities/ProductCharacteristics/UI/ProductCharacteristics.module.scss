@@ -1,6 +1,4 @@
-$orange-color: #f9a505;
-$gray-color: #383735;
-$light_gray-color: #b6ad9c;
+@import "../../../app//styles/globals.scss";
 
 .ProductCharacteristics_wrapper {
   display: flex;
@@ -8,36 +6,71 @@ $light_gray-color: #b6ad9c;
 
   .left {
     width: 50%;
+    display: flex;
+    align-items: stretch;
 
     .image {
       width: 100%;
-      border: 1px solid $gray-color;
+      height: auto;
+      border-right: 1px solid $gray-color;
     }
   }
   .right {
     width: 50%;
 
     h2 {
-      border: 1px solid $gray-color;
       padding: 30px 40px;
-      font-size: 48px;
+      font-size: 60px;
+      font-family: "Cuprum", sans-serif;
       text-align: center;
     }
     .mainInfo {
       display: flex;
-      align-items: center;
-      justify-content: space-between;
-      font-size: 20px;
+      align-items: stretch;
+      flex-wrap: wrap;
       overflow: hidden;
+      font-family: "Roboto", sans-serif;
+      font-size: 16px;
+      padding: 0;
 
-      div {
+      .mainInfoBlock {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         text-align: center;
-        border: 1px solid $gray-color;
-        padding: 30px 10px;
-        white-space: nowrap;
-        flex-grow: 1;
+        border-right: 1px solid $gray-color;
+        border-top: 1px solid $gray-color;
+        padding: 20px 10px;
         flex-basis: 25%;
         overflow: hidden;
+        &:last-child {
+          border-right: none;
+        }
+      }
+
+      .addToFavoriteListButton {
+        font-size: 30px;
+        border: none;
+        background-color: #fff;
+        color: $orange-color;
+        cursor: pointer;
+        &:hover {
+          color: brown;
+        }
+      }
+      .addToCartButton {
+        padding: 10px 35px;
+        font-family: "Roboto", sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        color: $gray-color;
+        background-color: $orange-color;
+        border: none;
+        cursor: pointer;
+        &:hover {
+          background-color: brown;
+          color: #fff;
+        }
       }
     }
     .secondaryInfo {
@@ -45,27 +78,54 @@ $light_gray-color: #b6ad9c;
       align-items: center;
       flex-wrap: wrap;
       overflow: hidden;
+      font-family: "Roboto", sans-serif;
+      font-size: 16px;
     }
-    .property {
-      font-size: 20px;
+    .secondaryInfoBlock,
+    .secondaryInfoBlockTop {
       text-align: center;
-      border: 1px solid $gray-color;
+      font-family: "Roboto", sans-serif;
+      font-size: 16px;
+      border-right: 1px solid $gray-color;
+      border-top: 1px solid $gray-color;
       padding: 30px 10px;
       white-space: nowrap;
       flex-grow: 1;
       flex-basis: 25%;
       overflow: hidden;
+      &:last-child {
+        border-right: none;
+      }
     }
-    .description,
-    .composition {
+    .secondaryInfoBlockTop {
+      border-right: none;
+    }
+    .description {
       text-align: left;
-      border: 1px solid $gray-color;
+      border-top: 1px solid $gray-color;
+      border-bottom: 1px solid $gray-color;
       padding: 30px 30px;
       h3 {
-        font-size: 30px;
+        font-size: 60px;
+        font-family: "Cuprum", sans-serif;
       }
       p {
-        font-size: 20px;
+        font-family: "Roboto", sans-serif;
+        font-size: 16px;
+      }
+    }
+
+    .composition {
+      text-align: left;
+      border-bottom: 1px solid $gray-color;
+      padding: 30px 30px;
+      h3 {
+        font-size: 60px;
+        font-family: "Cuprum", sans-serif;
+      }
+      p {
+        font-family: "Roboto", sans-serif;
+        font-size: 16px;
       }
     }
   }

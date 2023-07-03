@@ -1,6 +1,4 @@
-$orange-color: #f9a505;
-$gray-color: #383735;
-$light_gray-color: #b6ad9c;
+@import "../../../app/styles/globals.scss";
 
 .productCard_wrapper {
   border-left: 1px solid $gray-color;
@@ -13,8 +11,9 @@ $light_gray-color: #b6ad9c;
   min-height: 390px;
 }
 
-.productCard_wrapper img {
+.productCard_wrapper .image {
   width: 80%;
+  height: auto;
 }
 
 .naming {
@@ -40,4 +39,8 @@ $light_gray-color: #b6ad9c;
     color: $light_gray-color;
     margin-right: 10px;
   }
+}
+
+.productListPage {
+  // border-right: 1px solid $gray-color;
 }

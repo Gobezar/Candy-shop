@@ -13,3 +13,18 @@ $light_gray-color: #b6ad9c;
   scroll-behavior: smooth;
   text-decoration: none;
 }
+
+html,
+body,
+#root {
+  height: 100%;
+}
+.root-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.content {
+  flex: 1;
+}

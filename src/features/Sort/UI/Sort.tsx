@@ -3,6 +3,7 @@ import React, { useRef, useEffect } from "react";
 import useSortStore from "../model/useSortStore";
 import { sortList } from "../consts/sortList";
 import { sortObject } from "../model/useSortStore";
+import cl from "./Sort.module.scss";
 
 function Sort() {
   const { sort, setSort, open, setOpen } = useSortStore((state) => state);
@@ -27,13 +28,13 @@ function Sort() {
   }, []);
 
   return (
-    <div ref={sortRef} className="sort">
-      <div className="sort__label">
+    <div ref={sortRef} className={cl.sort}>
+      <div className={cl.sort_label}>
         <b>Сортировка по:</b>
         <span onClick={() => setOpen(!open)}>{sort.name}</span>
       </div>
       {open && (
-        <div className="sort__popup">
+        <div className={cl.sort_popup}>
           <ul>
             {sortList.map((obj, i) => (
               <li

@@ -1,13 +1,9 @@
-import { Metadata } from "next";
 import Navbar from "@/widgets/Navbar/UI/Navbar";
 import Search from "@/features/Search/UI/Search";
 import Sort from "@/features/Sort/UI/Sort";
 import CategoriesList from "@/widgets/CategoriesList/UI/CategoriesList";
 import ProductsList from "@/widgets/ProductsList/UI/ProductsList";
-
-export const metadata: Metadata = {
-  title: "Catalog | Online Store",
-};
+import cl from "./catalog.module.scss";
 
 const Catalog = () => {
   return (
@@ -16,8 +12,14 @@ const Catalog = () => {
         <Search />
       </Navbar>
       <CategoriesList />
-      <Sort />
-      <ProductsList />
+      <div className={cl.contentPage}>
+        <div className={cl.sortBlock}>
+          <Sort />
+        </div>
+        <div className={cl.productListBlock}>
+          <ProductsList />
+        </div>
+      </div>
     </div>
   );
 };

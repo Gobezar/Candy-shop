@@ -1,8 +1,11 @@
+"use client";
 import Link from "next/link";
 import { footerItems } from "../consts/footerItems";
+import { Link as ScrollLink } from "react-scroll";
+
 import cl from "./Footer.module.scss";
 
-const Footer = () => {
+const Footer: React.FC = () => {
   return (
     <footer className={cl.footer_wrapper}>
       <div>
@@ -21,7 +24,17 @@ const Footer = () => {
         <ul>
           {footerItems.map((item) => (
             <li key={item.id}>
-              <Link href={item.address}>{item.name}</Link>
+              {item.address.startsWith("#") ? (
+                <ScrollLink
+                  to={item.address.slice(1)}
+                  smooth={true}
+                  duration={300}
+                >
+                  {item.name}
+                </ScrollLink>
+              ) : (
+                <Link href={item.address}>{item.name}</Link>
+              )}
             </li>
           ))}
         </ul>

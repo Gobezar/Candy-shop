@@ -1,9 +1,7 @@
 "use client";
 import React from "react";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import { feedCategories } from "../consts/feedCategories";
-
 import "swiper/scss";
 import "swiper/scss/pagination";
 import "swiper/scss/navigation";
@@ -11,7 +9,7 @@ import "./CategoryFeed.scss";
 
 import { Autoplay } from "swiper";
 
-export default function CategoryFeed() {
+const CategoryFeed = () => {
   return (
     <>
       <Swiper
@@ -31,4 +29,5 @@ export default function CategoryFeed() {
       </Swiper>
     </>
   );
-}
+};
+export default CategoryFeed;
