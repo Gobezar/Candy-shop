@@ -44,3 +44,13 @@
     background-color: transparent;
   }
 }
+
+[class="dark"] {
+  .root_theme_secondary {
+    background-color: black;
+    &:hover {
+      color: #fff;
+      background-color: $orange-color;
+    }
+  }
+}

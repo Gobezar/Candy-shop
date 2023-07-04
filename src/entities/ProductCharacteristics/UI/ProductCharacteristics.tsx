@@ -42,12 +42,10 @@ const ProductCharacteristics: React.FC<ProductCharacteristics> = ({ id }) => {
               <div className={cl.mainInfoBlock}>{prod.weight} гр.</div>
               <div className={cl.mainInfoBlock}>{prod.price_second} ₽</div>
               <div className={cl.mainInfoBlock}>
-                <button
-                  className={cl.addToFavoriteListButton}
+                <StarFilled
                   onClick={() => addToFavoritesList(selectedProduct[0])}
-                >
-                  <StarFilled />
-                </button>
+                  className={cl.addToFavoriteListButton}
+                />
               </div>
               <div className={cl.mainInfoBlock}>
                 <button

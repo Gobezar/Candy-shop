@@ -1,10 +1,13 @@
 "use client";
 import React, { ReactNode } from "react";
+import { useTheme } from "next-themes";
 import Link from "next/link";
 import { Link as ScrollLink } from "react-scroll";
 import { navbarItems } from "../consts/navbarItems";
+import ThemeSwitcher from "@/shared/ThemeSwitcher/UI/ThemeSwitcher";
 import Image from "next/image";
 import logo from "../../../../public/images/logo.png";
+import darklogo from "../../../../public/images/darklogo.png";
 import cl from "./Navbar.module.scss";
 
 interface NavbarProps {
@@ -12,11 +15,15 @@ interface NavbarProps {
 }
 
 const Navbar: React.FC<NavbarProps> = ({ children }) => {
+  const { theme } = useTheme();
+
+  const logoToShow = theme === "light" ? logo : darklogo;
+
   return (
     <nav>
       <div className={cl.navbar_wrapper}>
         <Link href={"/"}>
-          <Image className={cl.navbar_logo} src={logo} alt="logo" />
+          <Image className={cl.navbar_logo} src={logoToShow} alt="logo" />
         </Link>
         {children}
         <ul className={cl.navbar_items}>
@@ -35,6 +42,9 @@ const Navbar: React.FC<NavbarProps> = ({ children }) => {
               )}
             </li>
           ))}
+          <li>
+            <ThemeSwitcher />
+          </li>
         </ul>
       </div>
     </nav>

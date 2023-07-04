@@ -1,0 +1,41 @@
+"use client";
+import { useState, useEffect } from "react";
+import { useTheme } from "next-themes";
+import { Switch } from "antd";
+import cl from "./ThemeSwitcher.module.scss";
+
+const ThemeSwitcher = () => {
+  const [mounted, setMounted] = useState(false);
+  const { theme, setTheme } = useTheme();
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null;
+  }
+
+  const changeTheme = () => {
+    if (theme === "light") {
+      setTheme("dark");
+    } else setTheme("light");
+  };
+
+  let themeLogo;
+  if (theme === "light") {
+    themeLogo = <Switch className={cl.SwitchToggleLight} />;
+  } else if (theme === "dark") {
+    themeLogo = <Switch defaultChecked className={cl.SwitchToggleDark} />;
+  }
+
+  return (
+    <div>
+      <button className={cl.toggleThemeButton} onClick={changeTheme}>
+        {themeLogo}
+      </button>
+    </div>
+  );
+};
+
+export default ThemeSwitcher;

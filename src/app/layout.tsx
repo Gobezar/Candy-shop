@@ -1,8 +1,10 @@
 import { Metadata } from "next";
 import { ReactQueryProvider } from "./ReactQueryProvider";
 import Footer from "@/widgets/Footer/UI/Footer";
+import ThemeProviders from "./ThemeProviders";
 
 import "./styles/globals.scss";
+import "./styles/themes.scss";
 
 export const metadata: Metadata = {
   title: "Online Shop",
@@ -19,10 +21,12 @@ export default function RootLayout({
       <body>
         <div className="root-layout">
           <ReactQueryProvider>
-            <main className="content">{children}</main>
+            <ThemeProviders>
+              <main className="content">{children}</main>
+            </ThemeProviders>
           </ReactQueryProvider>
-          <Footer />
         </div>
+        <Footer />
       </body>
     </html>
   );

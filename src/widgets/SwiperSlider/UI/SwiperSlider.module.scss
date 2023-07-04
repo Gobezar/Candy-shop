@@ -20,3 +20,11 @@
 .slider {
   width: 70%;
 }
+
+.swiperSlideCards {
+  border-right: none;
+}
+
+.lastSlide {
+  border-right: 1px solid $gray-color;
+}

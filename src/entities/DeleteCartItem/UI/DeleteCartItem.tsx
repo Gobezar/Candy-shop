@@ -2,15 +2,14 @@
 import React from "react";
 import useCartStore from "@/features/Cart/model/useCartStore";
 import cl from "./DeleteCartItem.module.scss";
-import Image from "next/image";
-import deleteIcon from "../../../../public/images/deleteIcon.png";
+import { DeleteOutlined } from "@ant-design/icons";
 
 const DeleteCartItem = (id: any) => {
   const removeItem = useCartStore((state) => state.removeItem);
 
   return (
     <div onClick={() => removeItem(id)}>
-      <Image className={cl.deleteCartImg} src={deleteIcon} alt="delete icon" />
+      <DeleteOutlined className={cl.deleteCartIcon} />
     </div>
   );
 };

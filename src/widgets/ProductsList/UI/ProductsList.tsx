@@ -34,7 +34,7 @@ const ProductsList = () => {
     data && data.map((obj: Iproduct) => <SkeletonProductCard key={obj.id} />);
 
   if (isLoading) {
-    return <Loading />;
+    return <Loading className="main" />;
   }
 
   if (isError) {

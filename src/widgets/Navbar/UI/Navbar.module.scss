@@ -22,14 +22,21 @@
     font-size: 16px;
     font-weight: bolder;
     cursor: pointer;
+
     a {
       color: $gray-color;
       text-decoration: none;
       border-bottom: 1px solid transparent;
+      &:last-child {
+        border: none;
+      }
     }
     :hover {
       border-bottom: 1px solid $orange-color;
       color: $orange-color;
+      &:last-child {
+        border: none;
+      }
     }
   }
 }
