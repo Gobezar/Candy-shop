@@ -4,8 +4,7 @@ $orange-color: #f9a505;
 $gray-color: #383735;
 $light_gray-color: #b6ad9c;
 
-html,
-body,
+body.root,
 * {
   padding: 0;
   margin: 0;
@@ -13,7 +12,7 @@ body,
   scroll-behavior: smooth;
 }
 
-html {
+body.root {
   & p,
   a,
   span,
