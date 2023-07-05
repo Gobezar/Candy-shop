@@ -4,14 +4,33 @@ $orange-color: #f9a505;
 $gray-color: #383735;
 $light_gray-color: #b6ad9c;
 
+html,
+body,
 * {
   padding: 0;
   margin: 0;
-  list-style: none;
   outline: none;
-  box-sizing: border-box;
   scroll-behavior: smooth;
-  text-decoration: none;
+}
+
+html {
+  & p,
+  a,
+  span,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    text-decoration: none;
+  }
+  ul {
+    list-style: none;
+  }
+  div {
+    box-sizing: border-box;
+  }
 }
 
 html,
