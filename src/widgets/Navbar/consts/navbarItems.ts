@@ -1,7 +1,5 @@
 import { InavbarItems } from "../model/types";
 
-// const cartIcon = "https://i.ibb.co/VJX2H0Q/icons8-cart-24.png";
-
 export const navbarItems: InavbarItems[] = [
   {
     id: 0,

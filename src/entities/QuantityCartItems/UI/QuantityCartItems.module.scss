@@ -3,6 +3,9 @@
 .QuantityCartItems_wrapper {
   font-family: "Roboto", sans-serif;
   font-size: 20px;
+  @media (max-width: 1200px) {
+    font-size: 16px;
+  }
 }
 
 .QuantityCartItems_wrapper button {
@@ -13,6 +16,12 @@
   color: $gray-color;
   font-size: 23px;
   cursor: pointer;
+  @media (max-width: 1200px) {
+    font-size: 20px;
+  }
+  @media (max-width: 1000px) {
+    margin: 10px;
+  }
   &:hover {
     color: $orange-color;
   }

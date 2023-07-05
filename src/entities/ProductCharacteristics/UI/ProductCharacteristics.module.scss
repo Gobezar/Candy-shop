@@ -3,26 +3,49 @@
 .ProductCharacteristics_wrapper {
   display: flex;
   justify-content: space-between;
+  @media (max-width: 1000px) {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+  }
 
   .left {
     width: 50%;
     display: flex;
-    align-items: stretch;
+    align-items: start;
 
     .image {
       width: 100%;
       height: auto;
-      border-right: 1px solid $gray-color;
+      object-fit: contain;
     }
   }
   .right {
     width: 50%;
+    border-left: 1px solid $gray-color;
+    @media (max-width: 1000px) {
+      width: 100%;
+      border: none;
+    }
 
     h2 {
       padding: 30px 40px;
       font-size: 60px;
       font-family: "Cuprum", sans-serif;
       text-align: center;
+      @media (max-width: 1600px) {
+        font-size: 50px;
+        padding: 20px 15px;
+      }
+      @media (max-width: 1400px) {
+        font-size: 45px;
+      }
+      @media (max-width: 900px) {
+        font-size: 40px;
+      }
+      @media (max-width: 770px) {
+        font-size: 36px;
+      }
     }
     .mainInfo {
       display: flex;
@@ -43,6 +66,10 @@
         padding: 20px 10px;
         flex-basis: 25%;
         overflow: hidden;
+        @media (max-width: 1600px) {
+          padding: 20px 15px;
+        }
+
         &:last-child {
           border-right: none;
         }
@@ -51,7 +78,6 @@
       .addToFavoriteListButton {
         font-size: 30px;
         border: none;
-        // background-color: #fff;
         color: $orange-color;
         cursor: pointer;
         &:hover {
@@ -66,7 +92,13 @@
         color: $gray-color;
         background-color: $orange-color;
         border: none;
+        @media (max-width: 1600px) {
+          padding: 10px 20px;
+        }
         cursor: pointer;
+        @media (max-width: 1200px) {
+          padding: 10px 20px;
+        }
         &:hover {
           background-color: brown;
           color: #fff;
@@ -93,6 +125,12 @@
       flex-grow: 1;
       flex-basis: 25%;
       overflow: hidden;
+      @media (max-width: 1600px) {
+        padding: 20px 15px;
+      }
+      @media (max-width: 1100px) {
+        padding: 20px 5px;
+      }
       &:last-child {
         border-right: none;
       }
@@ -105,9 +143,30 @@
       border-top: 1px solid $gray-color;
       border-bottom: 1px solid $gray-color;
       padding: 30px 30px;
+      max-height: 200px;
+      overflow-y: auto;
+      @media (max-width: 1600px) {
+        padding: 20px 15px;
+      }
+      @media (max-width: 1200px) {
+        padding: 15px 15px;
+        max-height: 150px;
+      }
       h3 {
         font-size: 60px;
         font-family: "Cuprum", sans-serif;
+        @media (max-width: 1600px) {
+          font-size: 50px;
+        }
+        @media (max-width: 1400px) {
+          font-size: 45px;
+        }
+        @media (max-width: 900px) {
+          font-size: 40px;
+        }
+        @media (max-width: 770px) {
+          font-size: 36px;
+        }
       }
       p {
         font-family: "Roboto", sans-serif;
@@ -119,9 +178,33 @@
       text-align: left;
       border-bottom: 1px solid $gray-color;
       padding: 30px 30px;
+      max-height: 200px;
+      overflow-y: auto;
+      @media (max-width: 1600px) {
+        padding: 20px 15px;
+      }
+      @media (max-width: 1200px) {
+        padding: 15px 15px;
+        max-height: 150px;
+      }
+      @media (max-width: 1000px) {
+        border-bottom: none;
+      }
       h3 {
         font-size: 60px;
         font-family: "Cuprum", sans-serif;
+        @media (max-width: 1600px) {
+          font-size: 50px;
+        }
+        @media (max-width: 1400px) {
+          font-size: 45px;
+        }
+        @media (max-width: 900px) {
+          font-size: 40px;
+        }
+        @media (max-width: 770px) {
+          font-size: 36px;
+        }
       }
       p {
         font-family: "Roboto", sans-serif;

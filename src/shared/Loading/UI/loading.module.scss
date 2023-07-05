@@ -9,6 +9,12 @@
   height: 469px;
   border-bottom: 1px solid $gray-color;
   border-top: 1px solid $gray-color;
+  @media (max-width: 1000px) {
+    font-size: 20px;
+  }
+  @media (max-width: 700px) {
+    font-size: 16px;
+  }
 }
 .mainLoader {
   border: none;

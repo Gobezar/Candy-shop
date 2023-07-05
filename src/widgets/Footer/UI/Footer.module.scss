@@ -16,6 +16,9 @@
     border-top: 1px solid $gray-color;
     padding: 70px 0;
     border-right: 1px solid $gray-color;
+    @media (max-width: 1200px) {
+      padding: 40px 20px;
+    }
   }
 
   h3 {
@@ -23,6 +26,9 @@
     margin: 0;
     color: $gray-color;
     font-size: 25px;
+    @media (max-width: 1400px) {
+      font-size: 23px;
+    }
   }
 
   p,

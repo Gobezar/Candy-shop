@@ -1,13 +1,12 @@
 "use client";
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
+import { useQuery } from "@tanstack/react-query";
 import useProductsStore from "@/app/store/useProductsStore";
 import useHistoryViewStore from "@/features/HistoryViewList/model/useHistoryViewList";
 import SkeletonProductCard from "@/shared/SkeletonProductCard/UI/SkeletonProductCard";
-import Error from "@/shared/Error/UI/error";
 import cn from "classnames";
-import Image from "next/image";
-import { useQuery } from "@tanstack/react-query";
 
 import cl from "./ProductCard.module.scss";
 

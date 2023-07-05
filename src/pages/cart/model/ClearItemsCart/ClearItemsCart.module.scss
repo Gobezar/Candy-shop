@@ -1,6 +1,4 @@
-$orange-color: #f9a505;
-$gray-color: #383735;
-$light_gray-color: #b6ad9c;
+@import "../../../../app//styles/globals.scss";
 
 .clearItemsCart_wrapper {
   display: flex;
@@ -18,9 +16,22 @@ $light_gray-color: #b6ad9c;
   padding: 15px 60px;
   background-color: $gray-color;
   border: none;
+  @media (max-width: 1000px) {
+    padding: 15px 40px;
+  }
+  @media (max-width: 900px) {
+    padding: 15px 20px;
+  }
+  @media (max-width: 600px) {
+    padding: 10px 10px;
+  }
   &:hover {
     background-color: $orange-color;
     color: #fff;
     font-weight: 600;
   }
+}
+.clearCartButton[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
 }

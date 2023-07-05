@@ -6,6 +6,12 @@
   grid-template-rows: repeat(1, 1fr);
   gap: 0px;
   overflow-x: auto;
+  @media (max-width: 814px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: 600px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
   .Container1,
   .Container2,
   .Container3,
@@ -25,6 +31,9 @@
     align-items: center;
     h2 {
       font-size: 48px;
+      @media (max-width: 1400px) {
+        font-size: 40px;
+      }
     }
   }
 }
@@ -32,21 +41,40 @@
 .Container1 {
   border-right: 1px solid $gray-color;
   border-bottom: 1px solid $gray-color;
+  @media (max-width: 814px) {
+    order: 2;
+  }
 }
 
 .Container2 {
   border-bottom: 1px solid $gray-color;
+  @media (max-width: 814px) {
+    order: 1;
+  }
 }
 
 .Container3 {
   border-left: 1px solid $gray-color;
   border-bottom: 1px solid $gray-color;
+  @media (max-width: 814px) {
+    order: 3;
+  }
 }
 
 .Container4 {
   border-right: 1px solid $gray-color;
+  @media (max-width: 814px) {
+    order: 4;
+  }
+}
+.Container5 {
+  @media (max-width: 814px) {
+    order: 5;
+  }
 }
 
 .Container6 {
-  border-left: 1px solid $gray-color;
+  @media (max-width: 814px) {
+    order: 6;
+  }
 }

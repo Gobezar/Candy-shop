@@ -22,9 +22,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ params: { id } }) => {
     <div>
       <Navbar />
       <CategoriesList />
-
       <ProductCharacteristics id={id} />
-
       <SwiperSlider couples={true}>С этим товаром покупают</SwiperSlider>
       <CategoryFeed />
       <SwiperSlider id={id} similar={true}>

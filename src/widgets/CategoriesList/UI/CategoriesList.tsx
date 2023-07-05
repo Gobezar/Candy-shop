@@ -1,9 +1,10 @@
 "use client";
-import React, { memo } from "react";
+import React from "react";
 import useCategoriesStore from "../model/useCategoriesStore";
+import Button from "@/shared/Button/UI/Button";
 import cn from "classnames";
 import { categories } from "../consts/categories";
-import Button from "@/shared/Button/UI/Button";
+
 import cl from "./CategoriesList.module.scss";
 
 type Props = {

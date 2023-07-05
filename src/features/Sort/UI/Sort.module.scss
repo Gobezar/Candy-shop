@@ -7,9 +7,19 @@
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   position: relative;
+  @media (max-width: 770px) {
+    margin-top: 55px;
+    margin-bottom: 55px;
+  }
+  @media (max-width: 550px) {
+    justify-content: flex-start;
+  }
   &_label {
     display: flex;
     align-items: center;
+    @media (max-width: 1400px) {
+      flex-direction: column;
+    }
 
     b {
       margin-right: 8px;
@@ -33,6 +43,14 @@
     padding: 10px 0;
     width: 90%;
     text-align: center;
+    @media (max-width: 770px) {
+      top: -170%;
+      right: -40%;
+      width: 70%;
+    }
+    @media (max-width: 550px) {
+      right: -20%;
+    }
 
     ul {
       overflow: hidden;

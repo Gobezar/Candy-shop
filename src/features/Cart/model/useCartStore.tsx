@@ -10,6 +10,7 @@ interface ICartStore {
   minusItem: (obj: Iproduct) => void;
   removeItem: (obj: Iproduct) => void;
   clearItem: () => void;
+  buyProducts: () => void;
 }
 
 const useCartStore = create<ICartStore>()(
@@ -69,6 +70,9 @@ const useCartStore = create<ICartStore>()(
           if (window.confirm("Ты действительно хочешь очистить корзину?")) {
             set(() => ({ totalPrice: 0, items: [] }));
           }
+        },
+        buyProducts: () => {
+          set(() => ({ totalPrice: 0, items: [] }));
         },
       }))
     ),

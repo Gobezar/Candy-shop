@@ -1,13 +1,11 @@
 "use client";
 import React from "react";
 import { useQuery } from "@tanstack/react-query";
-
 import { useSearchedElements } from "@/features/Search/lib/useSearchedElements";
 import useCategoriesStore from "@/widgets/CategoriesList/model/useCategoriesStore";
 import useSortStore from "@/features/Sort/model/useSortStore";
 import useSearchStore from "@/features/Search/model/useSearchStore";
 import useProductsStore from "@/app/store/useProductsStore";
-
 import ProductCard from "@/entities/ProductCard/UI/ProductCard";
 import Error from "@/shared/Error/UI/error";
 import SkeletonProductCard from "@/shared/SkeletonProductCard/UI/SkeletonProductCard";

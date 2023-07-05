@@ -1,6 +1,4 @@
-$orange-color: #f9a505;
-$gray-color: #383735;
-$light_gray-color: #b6ad9c;
+@import "../../../../app//styles//globals.scss";
 
 .TotalPrice_wrapper {
   display: flex;
@@ -8,10 +6,27 @@ $light_gray-color: #b6ad9c;
   justify-content: center;
   font-family: "Roboto", sans-serif;
   font-size: 20px;
-  width: 30%;
+  width: 40%;
+  @media (max-width: 1200px) {
+    width: 50%;
+    font-size: 16px;
+  }
+  @media (max-width: 1200px) {
+    width: 60%;
+  }
+  @media (max-width: 700px) {
+    width: 70%;
+    justify-content: flex-end;
+  }
+  @media (max-width: 600px) {
+    text-align: center;
+  }
 }
 .buyButton {
   margin-left: 10%;
+  @media (max-width: 600px) {
+    margin-left: 2%;
+  }
   button {
     cursor: pointer;
     color: #fff;
@@ -19,7 +34,6 @@ $light_gray-color: #b6ad9c;
     font-size: 16px;
     font-family: "Roboto", sans-serif;
     font-weight: 600;
-
     padding: 15px 60px;
     background-color: $orange-color;
     border: none;
@@ -28,5 +42,9 @@ $light_gray-color: #b6ad9c;
       color: #fff;
       font-weight: 600;
     }
+  }
+  button[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
   }
 }

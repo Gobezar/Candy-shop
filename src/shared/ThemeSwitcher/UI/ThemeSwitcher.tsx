@@ -31,9 +31,9 @@ const ThemeSwitcher = () => {
 
   return (
     <div>
-      <button className={cl.toggleThemeButton} onClick={changeTheme}>
+      <span className={cl.toggleThemeButton} onClick={changeTheme}>
         {themeLogo}
-      </button>
+      </span>
     </div>
   );
 };

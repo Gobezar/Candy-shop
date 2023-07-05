@@ -1,18 +1,18 @@
 "use client";
 import React, { useMemo, useEffect } from "react";
+import { useQuery } from "@tanstack/react-query";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Mousewheel } from "swiper";
 import useProductsStore from "@/app/store/useProductsStore";
 import useHistoryViewStore from "@/features/HistoryViewList/model/useHistoryViewList";
+import useFavoritesListStore from "@/features/FavoritesList/model/useFavoritesList";
+import Loading from "@/shared/Loading/UI/loading";
 import ProductCard from "../../../entities/ProductCard/UI/ProductCard";
 import "./SwiperSlide.scss";
 import cn from "classnames";
-import { useQuery } from "@tanstack/react-query";
 import cl from "./SwiperSlider.module.scss";
-import Loading from "@/shared/Loading/UI/loading";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Mousewheel } from "swiper";
 import "swiper/css";
 import "../../../app/styles/globals.scss";
-import useFavoritesListStore from "@/features/FavoritesList/model/useFavoritesList";
 import { Iproduct } from "@/types";
 
 interface SwiperSliderProps {

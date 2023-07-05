@@ -7,4 +7,10 @@
   font-size: 16px;
   border: none;
   border-bottom: 1px solid $gray-color;
+  @media (max-width: 1600px) {
+    width: 350px;
+  }
+  @media (max-width: 1200px) {
+    width: 250px;
+  }
 }

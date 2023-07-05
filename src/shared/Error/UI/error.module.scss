@@ -6,4 +6,19 @@
   font-family: "Cuprum", sans-serif;
   margin: 15%;
   color: $gray-color;
+  @media (max-width: 1600px) {
+    font-size: 50px;
+  }
+  @media (max-width: 1400px) {
+    font-size: 45px;
+  }
+  @media (max-width: 900px) {
+    font-size: 40px;
+  }
+  @media (max-width: 770px) {
+    font-size: 36px;
+  }
+  @media (max-width: 550px) {
+    font-size: 28px;
+  }
 }

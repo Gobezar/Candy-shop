@@ -6,6 +6,12 @@
   padding: 20px;
   border-bottom: 1px solid $gray-color;
   border-top: 1px solid $gray-color;
+  @media (max-width: 770px) {
+    justify-content: center;
+  }
+  @media (max-width: 650px) {
+    flex-wrap: wrap;
+  }
 }
 
 .active button {

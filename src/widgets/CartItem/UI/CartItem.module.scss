@@ -5,6 +5,12 @@
   width: 100%;
   padding: 0 7%;
   border-bottom: 1px solid $gray-color;
+  @media (max-width: 1600px) {
+    padding: 0 3%;
+  }
+  @media (max-width: 1200px) {
+    padding: 0;
+  }
 
   .deleteBlock,
   .imgBlock,
@@ -19,6 +25,15 @@
     text-align: center;
     border-left: 1px solid $gray-color;
     border-right: 1px solid $gray-color;
+    @media (max-width: 1400px) {
+      width: 7%;
+    }
+    @media (max-width: 1200px) {
+      border-left: none;
+    }
+    @media (max-width: 700px) {
+      width: 5%;
+    }
   }
   .titleBlock {
     width: 40%;
@@ -26,6 +41,16 @@
     font-family: "Roboto", sans-serif;
     font-size: 20px;
     border-right: 1px solid $gray-color;
+    @media (max-width: 1400px) {
+      width: 30%;
+    }
+    @media (max-width: 1200px) {
+      padding: 0 10px;
+      font-size: 16px;
+    }
+    @media (max-width: 1000px) {
+      width: 20%;
+    }
   }
   .imgBlock {
     width: 20%;
@@ -43,6 +68,11 @@
     font-size: 20px;
     text-align: center;
     border-right: 1px solid $gray-color;
+    @media (max-width: 1200px) {
+      border-right: none;
+      font-size: 16px;
+      padding: 0 10px;
+    }
   }
 }
 
@@ -54,6 +84,18 @@
     font-size: 60px;
     font-family: "Cuprum", sans-serif;
     margin-bottom: 2%;
+    @media (max-width: 1600px) {
+      font-size: 50px;
+    }
+    @media (max-width: 1400px) {
+      font-size: 45px;
+    }
+    @media (max-width: 900px) {
+      font-size: 40px;
+    }
+    @media (max-width: 770px) {
+      font-size: 36px;
+    }
   }
   .cartEmptyImage {
     width: 30%;
