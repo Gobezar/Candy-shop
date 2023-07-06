@@ -1,6 +1,8 @@
 "use client";
 import React, { useMemo, useEffect } from "react";
-import { useQuery } from "@tanstack/react-query";
+// import { useQuery } from "@tanstack/react-query";
+import { useQuery } from "react-query";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Mousewheel } from "swiper";
 import useProductsStore from "@/app/store/useProductsStore";
