@@ -1,7 +1,5 @@
 "use client";
 import React, { useMemo, useEffect } from "react";
-import { useQuery } from "@tanstack/react-query";
-// import { useQuery } from "react-query";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Mousewheel } from "swiper";
 import useProductsStore from "@/app/store/useProductsStore";
@@ -41,7 +39,6 @@ const SwiperSlider: React.FC<SwiperSliderProps> = ({
   const { products } = useProductsStore((state) => state);
   const { favoritesList } = useFavoritesListStore((state) => state);
   const { historyViewList } = useHistoryViewStore((state) => state);
-  // const { isLoading, isError, data } = useQuery(["products"]);
 
   const randomProducts: Iproduct[] = useMemo(() => {
     const shuffled = products.sort(() => 0.5 - Math.random());

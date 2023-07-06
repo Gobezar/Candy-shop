@@ -3,7 +3,6 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useQuery } from "@tanstack/react-query";
-// import { useQuery } from "react-query";
 import useProductsStore from "@/app/store/useProductsStore";
 import useHistoryViewStore from "@/features/HistoryViewList/model/useHistoryViewList";
 import SkeletonProductCard from "@/shared/SkeletonProductCard/UI/SkeletonProductCard";

@@ -1,11 +1,3 @@
-// import Cart from "@/pages/cart/UI/cart";
-// import { Metadata } from "next";
-
-// export const metadata: Metadata = {
-//   title: "Корзина | Candy Shop",
-// };
-// export default Cart;
-
 import React from "react";
 import Navbar from "@/widgets/Navbar/UI/Navbar";
 import CategoriesList from "@/widgets/CategoriesList/UI/CategoriesList";
