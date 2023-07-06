@@ -1,3 +1,4 @@
+import RootLayout from "@/app/layout";
 import Navbar from "@/widgets/Navbar/UI/Navbar";
 import Search from "@/features/Search/UI/Search";
 import Sort from "@/features/Sort/UI/Sort";
@@ -8,18 +9,20 @@ import cl from "./catalog.module.scss";
 const Catalog = () => {
   return (
     <div>
-      <Navbar>
-        <Search />
-      </Navbar>
-      <CategoriesList />
-      <div className={cl.contentPage}>
-        <div className={cl.sortBlock}>
-          <Sort />
+      <RootLayout>
+        <Navbar>
+          <Search />
+        </Navbar>
+        <CategoriesList />
+        <div className={cl.contentPage}>
+          <div className={cl.sortBlock}>
+            <Sort />
+          </div>
+          <div className={cl.productListBlock}>
+            <ProductsList />
+          </div>
         </div>
-        <div className={cl.productListBlock}>
-          <ProductsList />
-        </div>
-      </div>
+      </RootLayout>
     </div>
   );
 };
