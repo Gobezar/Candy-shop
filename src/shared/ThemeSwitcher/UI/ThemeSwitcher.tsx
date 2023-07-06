@@ -5,16 +5,16 @@ import { Switch } from "antd";
 import cl from "./ThemeSwitcher.module.scss";
 
 const ThemeSwitcher = () => {
-  const [mounted, setMounted] = useState(false);
+  // const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+  // useEffect(() => {
+  //   setMounted(true);
+  // }, []);
 
-  if (!mounted) {
-    return null;
-  }
+  // if (!mounted) {
+  //   return null;
+  // }
 
   const changeTheme = () => {
     if (theme === "light") {
