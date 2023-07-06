@@ -22,7 +22,7 @@ const ThemeSwitcher = () => {
   return (
     <div>
       <span className={cl.toggleThemeButton} onClick={changeTheme}>
-        <Switch className={cl.SwitchToggleLight} />
+        {themeLogo}
       </span>
     </div>
   );
