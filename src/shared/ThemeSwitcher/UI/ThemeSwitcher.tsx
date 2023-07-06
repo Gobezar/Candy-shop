@@ -12,12 +12,12 @@ const ThemeSwitcher = () => {
     } else setTheme("light");
   };
 
-  // let themeLogo;
-  // if (theme === "light") {
-  //   themeLogo = <Switch className={cl.SwitchToggleLight} />;
-  // } else if (theme === "dark") {
-  //   themeLogo = <Switch defaultChecked className={cl.SwitchToggleDark} />;
-  // }
+  let themeLogo;
+  if (theme === "light") {
+    themeLogo = <Switch className={cl.SwitchToggleLight} />;
+  } else if (theme === "dark") {
+    themeLogo = <Switch defaultChecked className={cl.SwitchToggleDark} />;
+  }
 
   return (
     <div>
