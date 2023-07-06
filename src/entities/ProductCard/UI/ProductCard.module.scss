@@ -50,8 +50,8 @@
     margin: 30px 0px 20px 0px;
     justify-content: space-evenly;
   }
-  & span {
-    text-decoration: line-through;
+  span {
+    text-decoration: line-through !important;
     color: $light_gray-color;
     margin-right: 10px;
   }
