@@ -1,8 +1,6 @@
 "use client";
 import React from "react";
-// import { useQuery } from "@tanstack/react-query";
-import { useQuery } from "react-query";
-
+import { useQuery } from "@tanstack/react-query";
 import { useSearchedElements } from "@/features/Search/lib/useSearchedElements";
 import useCategoriesStore from "@/widgets/CategoriesList/model/useCategoriesStore";
 import useSortStore from "@/features/Sort/model/useSortStore";
@@ -21,14 +19,15 @@ const ProductsList = () => {
   const sortType = sort.sortProperty;
   const { searchText } = useSearchStore((state) => state);
   const fetchProducts = useProductsStore((state) => state.fetchProducts);
-  const { isLoading, isError, data } = useQuery(
-    ["products", { categoryId, sortType }],
-    () =>
+  const { isLoading, isError, data } = useQuery({
+    queryKey: ["products", { categoryId, sortType }],
+    queryFn: () =>
       fetchProducts({
         category: categoryId > 0 ? `category=${categoryId}` : "",
         sortType,
-      })
-  );
+      }),
+  });
+
   const searchedElements = useSearchedElements(data, searchText);
   const skeleton =
     data && data.map((obj: Iproduct) => <SkeletonProductCard key={obj.id} />);
