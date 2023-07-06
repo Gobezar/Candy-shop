@@ -1,5 +1,4 @@
 import React from "react";
-import RootLayout from "@/app/layout";
 import Navbar from "@/widgets/Navbar/UI/Navbar";
 import CategoriesList from "@/widgets/CategoriesList/UI/CategoriesList";
 import SwiperSlider from "@/widgets/SwiperSlider/UI/SwiperSlider";
@@ -12,19 +11,17 @@ import cl from "./cart.module.scss";
 const Cart = () => {
   return (
     <div>
-      <RootLayout>
-        <Navbar />
-        <CategoriesList />
-        <CartItem />
-        <div className={cl.buyingBlock_wrapper}>
-          <ClearItemsCart />
-          <TotalPrice />
-        </div>
-        <SwiperSlider favorites={true}>Избранное</SwiperSlider>
+      <Navbar />
+      <CategoriesList />
+      <CartItem />
+      <div className={cl.buyingBlock_wrapper}>
+        <ClearItemsCart />
+        <TotalPrice />
+      </div>
+      <SwiperSlider favorites={true}>Избранное</SwiperSlider>
 
-        <CategoryFeed />
-        <SwiperSlider historyView={true}>Вы смотрели</SwiperSlider>
-      </RootLayout>
+      <CategoryFeed />
+      <SwiperSlider historyView={true}>Вы смотрели</SwiperSlider>
     </div>
   );
 };

@@ -1,5 +1,4 @@
 import React from "react";
-import RootLayout from "@/app/layout";
 import Navbar from "@/widgets/Navbar/UI/Navbar";
 import CategoriesList from "@/widgets/CategoriesList/UI/CategoriesList";
 import ProductCharacteristics from "@/entities/ProductCharacteristics/UI/ProductCharacteristics";
@@ -21,16 +20,14 @@ export function generateMetadata({ params: { id } }: ProductPageProps) {
 const ProductPage: React.FC<ProductPageProps> = ({ params: { id } }) => {
   return (
     <div>
-      <RootLayout>
-        <Navbar />
-        <CategoriesList />
-        <ProductCharacteristics id={id} />
-        <SwiperSlider couples={true}>С этим товаром покупают</SwiperSlider>
-        <CategoryFeed />
-        <SwiperSlider id={id} similar={true}>
-          Похожие товары
-        </SwiperSlider>
-      </RootLayout>
+      <Navbar />
+      <CategoriesList />
+      <ProductCharacteristics id={id} />
+      <SwiperSlider couples={true}>С этим товаром покупают</SwiperSlider>
+      <CategoryFeed />
+      <SwiperSlider id={id} similar={true}>
+        Похожие товары
+      </SwiperSlider>
     </div>
   );
 };

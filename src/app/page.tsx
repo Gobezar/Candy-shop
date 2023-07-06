@@ -1,4 +1,3 @@
-import RootLayout from "./layout";
 import CategoriesList from "@/widgets/CategoriesList/UI/CategoriesList";
 import Navbar from "@/widgets/Navbar/UI/Navbar";
 import Header from "@/widgets/Header/UI/Header";
@@ -11,17 +10,15 @@ import ContactsSection from "@/widgets/ContactsSection/UI/ContactsSection";
 export default function Home() {
   return (
     <>
-      <RootLayout>
-        <Navbar />
-        <CategoriesList />
-        <Header />
-        <CategoryFeed />
-        <SwiperSlider novelties={true}>Новинки</SwiperSlider>
-        <CategoriesSection />
-        <SwiperSlider catalog={true}>Каталог</SwiperSlider>
-        <AboutSection />
-        <ContactsSection />
-      </RootLayout>
+      <Navbar />
+      <CategoriesList />
+      <Header />
+      <CategoryFeed />
+      <SwiperSlider novelties={true}>Новинки</SwiperSlider>
+      <CategoriesSection />
+      <SwiperSlider catalog={true}>Каталог</SwiperSlider>
+      <AboutSection />
+      <ContactsSection />
     </>
   );
 }

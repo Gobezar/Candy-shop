@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
-import { useQuery } from "@tanstack/react-query";
+// import { useQuery } from "@tanstack/react-query";
+import { useQuery } from "react-query";
 import { useSearchedElements } from "@/features/Search/lib/useSearchedElements";
 import useCategoriesStore from "@/widgets/CategoriesList/model/useCategoriesStore";
 import useSortStore from "@/features/Sort/model/useSortStore";
