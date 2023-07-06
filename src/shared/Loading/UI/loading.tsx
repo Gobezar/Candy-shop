@@ -9,7 +9,7 @@ const Loading: React.FC<ILoading> = ({ className }) => {
   return (
     <div className={cn(cl.loader, className === "main" ? cl.mainLoader : "")}>
       <p>Запекаем бисквиты...Взбиваем сливки...Плавим шоколад...</p>
-      <figure>
+      <figure className={cl.figure}>
         <div className={cl.white}></div>
         <div className={cl.dot}></div>
         <div className={cl.dot}></div>

@@ -4,13 +4,15 @@ $orange-color: #f9a505;
 $gray-color: #383735;
 $light_gray-color: #b6ad9c;
 
-body.root {
+body.root,
+html.root {
   padding: 0;
   margin: 0;
   outline: none;
   scroll-behavior: smooth;
 }
 
+html.root,
 body.root {
   & p,
   a,
@@ -25,13 +27,17 @@ body.root {
   }
   ul {
     list-style: none;
+    margin: 0;
+    padding: 0;
   }
   div {
     box-sizing: border-box;
   }
 }
 
-body.root {
+html.root,
+body.root,
+#root {
   height: 100%;
 }
 

@@ -17,7 +17,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html className="root" lang="en">
       <body className="root">
         <div className="root-layout">
           <ReactQueryProvider>
