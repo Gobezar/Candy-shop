@@ -14,5 +14,5 @@ export default function ThemeProviders({ children }: { children: any }) {
     return <Loading className="main" />;
   }
 
-  return <ThemeProvider attribute="class">{children}</ThemeProvider>;
+  return <ThemeProvider attribute="theme-mode">{children}</ThemeProvider>;
 }
